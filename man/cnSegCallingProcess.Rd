@@ -8,9 +8,7 @@ cnSegCallingProcess(
   dataSetName,
   normalTumorArray,
   chromosome = 1:22,
-  method = c("PELT", "cghseg"),
   Rho = NULL,
-  Kmax = 10,
   listOfFiles = NULL,
   onlySNP = TRUE,
   savePlot = TRUE,
@@ -27,11 +25,7 @@ The first column contains the name of normal files and the second the names of a
 
 \item{chromosome}{A vector containing the chromosomes to segment.}
 
-\item{method}{method of segmentation, either "PELT" or "cghseg".}
-
-\item{Rho}{For method="PELT", vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.}
-
-\item{Kmax}{For method="cghseg", maximal number of segments.}
+\item{Rho}{Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.}
 
 \item{listOfFiles}{A vector containing the names of the files from the dataSetName to use.}
 
