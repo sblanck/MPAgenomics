@@ -21,7 +21,5 @@ Imports:
     R.utils,changepoint(>= 1.1),glmnet,HDPenReg(>= 0.90),spikeslab,devtools,drat
 Suggests:
     CGHcall,aroma.affymetrix,aroma.cn,aroma.core,aroma.light,snowfall,R.devices,R.filesets,R.methodsS3,R.oo,matrixStats
-Enhances:
-    cghseg
 Roxygen: list(wrap = FALSE)
 RoxygenNote: 7.1.0
