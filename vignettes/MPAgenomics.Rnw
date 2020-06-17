@@ -950,7 +950,7 @@ seg$segment
 			\texttt{normalTumorArray} & Only in the case of normal-tumor study. A csv file or a data.frame\\
 			~ & containing the mapping between normal and tumor files(Fig. \ref{normalTumorArray}).\\
 			\texttt{chromosome} & A vector containing the chromosome to segment.\\
-  		\texttt{Rho} Vector containing all the penalization values to test \\
+  		\texttt{Rho} & Vector containing all the penalization values to test \\
 			~ &  for the segmentation. If no values are provided, default values will be used.\\
       \texttt{listOfFiles} & A vector containing the file names from the dataSetName to use.\\
 			\texttt{onlySNP} & If TRUE, only the SNP probes will be used.\\
