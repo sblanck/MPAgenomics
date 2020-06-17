@@ -8,7 +8,7 @@
 #' @param normalTumorArray Only in the case of normal-tumor study. A csv file or a data.frame containing the mapping between normal and tumor files.
 #' The first column contains the name of normal files and the second the names of associated tumor files.
 #' @param chromosome A vector containing the chromosomes to segment.
-#' @param Rho Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.
+#' @param Rho A Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.
 #' @param listOfFiles A vector containing the names of the files from the dataSetName to use.
 #' @param onlySNP If TRUE, only the SNP probes will be used.
 #' @param savePlot If TRUE, save the segmented signal in figures folder.

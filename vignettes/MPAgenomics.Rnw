@@ -731,7 +731,7 @@ savePlot=TRUE)
 				\texttt{normalTumorArray} & Only in the case of normal-tumor study. A csv file or a data.frame\\
 				~~ & containing the mapping between normal and tumor files(Fig. \ref{normalTumorArray}).\\
 				\texttt{chromosome} & A vector with the chromosomes to be segmented.\\
-				\texttt{Rho} Vector containing all the penalization values to test \\
+				\texttt{Rho} & Vector containing all the penalization values to test \\
 				~ &  for the segmentation. If no values are provided, default values will be used.\\
         \texttt{onlySNP} & If TRUE, only the copy-number for SNPs positions will be returned (default=TRUE).\\
 				\texttt{listOfFiles} & A vector containing the names of the files in dataSetName folder for which\\
@@ -804,7 +804,7 @@ savePlot=TRUE,verbose=TRUE)
 				\texttt{normalTumorArray} & A csv file or a data.frame\\
 				~~ & containing the mapping between normal and tumor files(Fig. \ref{normalTumorArray}).\\
 				\texttt{chromosome} & A vector with the chromosomes to be segmented.\\
-  			\texttt{Rho} Vector containing all the penalization values to test\\
+  			\texttt{Rho} & Vector containing all the penalization values to test\\
 				~ &  for the segmentation. If no values are provided, default values will be used.\\
         \texttt{listOfFiles} & A vector containing the names of the files in dataSetName folder for which\\
 				~ & the allele B profile is segmented (default is all the files).\\
@@ -839,7 +839,7 @@ savePlot=TRUE,verbose=TRUE)
 				Parameters & Description\\
 				\hline
 				\texttt{signal} & A vector containing the signal.\\
-    		\texttt{Rho} Vector containing all the penalization values to test\\
+    		\texttt{Rho} & Vector containing all the penalization values to test\\
 				~ & for the segmentation. If no values are provided, default values will be used.\\
     		\texttt{position} & A vector containing the position of all elements of the signal (not necessary).\\
 				\texttt{plot} & If TRUE, plot some graphics (default=TRUE	).\\

@@ -25,7 +25,7 @@ The first column contains the name of normal files and the second the names of a
 
 \item{chromosome}{A vector containing the chromosomes to segment.}
 
-\item{Rho}{Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.}
+\item{Rho}{A Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.}
 
 \item{listOfFiles}{A vector containing the names of the files from the dataSetName to use.}
 
