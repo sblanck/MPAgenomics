@@ -7,9 +7,7 @@
 #' @param normalTumorArray Only in the case of normal-tumor study. A csv file or a data.frame containing the mapping between normal and tumor files.
 #' The first column contains the name of normal files and the second the names of associated tumor files.
 #' @param chromosome  A vector with the chromosomes to be segmented. 
-#' @param method method of segmentation, either "PELT" or "cghseg".
-#' @param Rho For method="PELT", vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.
-#' @param Kmax For method="cghseg", maximal number of segments.
+#' @param Rho Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.
 #' @param listOfFiles A vector containing the names of the files in dataSetName folder for which the allele B profile is segmented (default is all the files).
 #' @param savePlot if TRUE, graphics of the segmented allele B profile will be saved in the figures/dataSetName/segmentation/fracB folder. (default=TRUE).
 #' @param verbose if TRUE print some informations
@@ -28,7 +26,7 @@
 #' 
 #' @author Quentin Grimonprez
 #' 
-segFracBSignal=function(dataSetName,normalTumorArray,chromosome=1:22,method=c("PELT","cghseg"),Rho=NULL,Kmax=10,listOfFiles=NULL,savePlot=TRUE,verbose=TRUE)
+segFracBSignal=function(dataSetName,normalTumorArray,chromosome=1:22,Rho=NULL,listOfFiles=NULL,savePlot=TRUE,verbose=TRUE)
 {
   method <- match.arg(method)
   
@@ -213,9 +211,7 @@ segFracBSignal=function(dataSetName,normalTumorArray,chromosome=1:22,method=c("P
       if (is.null(fracB[,3]) || length(fracB[,3])<2){
         cat("to few point to segment \n")
       } else {
-        seg=switch(method,
-          PELT=PELT(fracB[,3],Rho,position=fracB$position,plot=TRUE,verbose=verbose),
-          cghseg=cghseg(fracB[,3],Kmax,position=fracB$position,plot=TRUE,verbose=verbose))
+        seg=PELT(fracB[,3],Rho,position=fracB$position,plot=TRUE,verbose=verbose)
         cat("OK\n")
         
         if(savePlot)

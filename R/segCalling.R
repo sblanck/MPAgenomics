@@ -8,9 +8,7 @@
 #' @param normalTumorArray Only in the case of normal-tumor study. A csv file or a data.frame containing the mapping between normal and tumor files.
 #' The first column contains the name of normal files and the second the names of associated tumor files.
 #' @param chromosome A vector containing the chromosomes to segment.
-#' @param method method of segmentation, either "PELT" or "cghseg".
-#' @param Rho For method="PELT", vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.
-#' @param Kmax For method="cghseg", maximal number of segments.
+#' @param Rho Vector containing all the penalization values to test for the segmentation. If no values are provided, default values will be used.
 #' @param listOfFiles A vector containing the names of the files from the dataSetName to use.
 #' @param onlySNP If TRUE, only the SNP probes will be used.
 #' @param savePlot If TRUE, save the segmented signal in figures folder.
@@ -38,7 +36,7 @@
 #' 
 #' @author Quentin Grimonprez
 #' 
-cnSegCallingProcess=function(dataSetName,normalTumorArray,chromosome=1:22,method=c("PELT","cghseg"),Rho=NULL,Kmax=10,listOfFiles=NULL,onlySNP=TRUE,savePlot=TRUE,nclass=3,cellularity=1,...)
+cnSegCallingProcess=function(dataSetName,normalTumorArray,chromosome=1:22,Rho=NULL,listOfFiles=NULL,onlySNP=TRUE,savePlot=TRUE,nclass=3,cellularity=1,...)
 {
   requireNamespace("R.devices")
   method <- match.arg(method)
@@ -207,10 +205,8 @@ cnSegCallingProcess=function(dataSetName,normalTumorArray,chromosome=1:22,method
       
         cat(paste0("Segmentation of file ",name," chromosome ",chr,"..."))
 
-        seg=switch(method,
-          PELT=PELT(as.vector(CN[,3]),Rho,CN$position,plot=TRUE,verbose=FALSE),
-          cghseg=cghseg(as.vector(CN[,3]),Kmax,CN$position,plot=TRUE,verbose=FALSE))
-          
+        seg=PELT(as.vector(CN[,3]),Rho,CN$position,plot=TRUE,verbose=FALSE)
+        
         cat("OK\n")
         
         if(savePlot)
