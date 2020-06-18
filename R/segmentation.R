@@ -61,7 +61,6 @@ segmentation=function(signal,Rho=NULL,position=NULL,plot=TRUE,verbose=TRUE)
 #' 
 segmentationAroma=function(dataSetName,normalTumorArray,chromosome=1:22,Rho=NULL,listOfFiles=NULL,onlySNP=TRUE,savePlot=TRUE,verbose=TRUE)
 {
-  method <- match.arg(method)
   seg=PELTaroma(dataSetName,normalTumorArray,chromosome,Rho,listOfFiles,onlySNP,savePlot,verbose)
   
   return(seg)

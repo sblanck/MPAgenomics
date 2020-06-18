@@ -28,7 +28,6 @@
 #' 
 segFracBSignal=function(dataSetName,normalTumorArray,chromosome=1:22,Rho=NULL,listOfFiles=NULL,savePlot=TRUE,verbose=TRUE)
 {
-  method <- match.arg(method)
   
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )

@@ -39,7 +39,6 @@
 cnSegCallingProcess=function(dataSetName,normalTumorArray,chromosome=1:22,Rho=NULL,listOfFiles=NULL,onlySNP=TRUE,savePlot=TRUE,nclass=3,cellularity=1,...)
 {
   requireNamespace("R.devices")
-  method <- match.arg(method)
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
