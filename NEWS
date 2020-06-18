@@ -1,3 +1,6 @@
+Version 1.2 (18-06-2020)
+- remove cghseg fonctionnalities for CRAN submission
+
 Version 1.1.8 (16-01-2020)
 - cghseg moved to enhances section
 
