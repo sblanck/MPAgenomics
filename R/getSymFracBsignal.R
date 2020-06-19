@@ -34,28 +34,28 @@ getSymFracBSignal=function(dataSetName,file,chromosome,normalTumorArray,verbose=
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-    #     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://www.braju.com/R/hbLite.R\")\n")
+    message(" hbLite(\"sfit\")\n")
+    message("source(\"http://bioconductor.org/biocLite.R\")\n")
+    message("biocLite(\"affxparser\")\n")
+    message("biocLite(\"DNAcopy\")\n")
+    message("biocLite(\"aroma.light\")\n")
+    #     message("source(\"http://aroma-project.org/hbLite.R\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
   #   else
-  #     cat("Package aroma.affymetrix loaded.\n")
+  #     message("Package aroma.affymetrix loaded.\n")
   
   if(!suppressPackageStartupMessages(requireNamespace("aroma.cn", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.cn. For download it:\n")
-    cat("install.packages(\"aroma.cn\")\n") 
+    message("Package not found: aroma.cn. For download it:\n")
+    message("install.packages(\"aroma.cn\")\n") 
     allpkg=FALSE
   }
   #   else
-  #     cat("Package aroma.cn loaded.\n")
+  #     message("Package aroma.cn loaded.\n")
   
   
   if(!allpkg)
@@ -95,13 +95,13 @@ getSymFracBSignal=function(dataSetName,file,chromosome,normalTumorArray,verbose=
   if(missing(normalTumorArray))
   {
     if(verbose)
-      #cat("No normalTumorArray specified.\n The allele B fraction signal will be extracted for all the specified data.\n")    
+      #message("No normalTumorArray specified.\n The allele B fraction signal will be extracted for all the specified data.\n")    
       stop("No normalTumorArray specified.\n Youd need to specify a normalTumorArray to extract and symmetrize allele B fraction")
   }
 #   else
 #   {
 #     if(verbose)
-#       cat("The allele B fraction signal will be extracted for normal and tumor signals. The normalized tumorboost allele B fraction signal will be extracted for tumor signal.")
+#       message("The allele B fraction signal will be extracted for normal and tumor signals. The normalized tumorboost allele B fraction signal will be extracted for tumor signal.")
 #     singleStudy=FALSE
 #   }
   

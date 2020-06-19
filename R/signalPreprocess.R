@@ -36,28 +36,28 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-#     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://www.braju.com/R/hbLite.R\")\n")
+    message(" hbLite(\"sfit\")\n")
+    message("source(\"http://bioconductor.org/biocLite.R\")\n")
+    message("biocLite(\"affxparser\")\n")
+    message("biocLite(\"DNAcopy\")\n")
+    message("biocLite(\"aroma.light\")\n")
+#     message("source(\"http://aroma-project.org/hbLite.R\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
 #   else
-#     cat("Package aroma.affymetrix loaded.\n")
+#     message("Package aroma.affymetrix loaded.\n")
 
   if(!suppressPackageStartupMessages(requireNamespace("aroma.cn", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.cn. For download it:\n")
-    cat("install.packages(\"aroma.cn\")\n") 
+    message("Package not found: aroma.cn. For download it:\n")
+    message("install.packages(\"aroma.cn\")\n") 
     allpkg=FALSE
   }
 #   else
-#     cat("Package aroma.cn loaded.\n")
+#     message("Package aroma.cn loaded.\n")
 
   if(!allpkg)
     stop("You have to install some packages : Follow the printed informations.")
@@ -111,10 +111,10 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
   #check if we are in a normal-tumor study or in a single array study
   singleStudy=TRUE
   if(missing(normalTumorArray))
-    cat("No normalTumorArray specified.\n A normalization and a genotype calls will be processed on all the data.\n")
+    message("No normalTumorArray specified.\n A normalization and a genotype calls will be processed on all the data.\n")
   else
   {
-    cat("A normal-tumor normalization will be processed with genotypage calls only for normal case and a tumorboost normalization for the tumor allele B fraction signal.")
+    message("A normal-tumor normalization will be processed with genotypage calls only for normal case and a tumorboost normalization for the tumor allele B fraction signal.")
     singleStudy=FALSE
   }
 
@@ -211,22 +211,22 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   allpkg=TRUE
   if(!requireNamespace("aroma.affymetrix", quietly=TRUE) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-    #     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://www.braju.com/R/hbLite.R\")\n")
+    message(" hbLite(\"sfit\")\n")
+    message("source(\"http://bioconductor.org/biocLite.R\")\n")
+    message("biocLite(\"affxparser\")\n")
+    message("biocLite(\"DNAcopy\")\n")
+    message("biocLite(\"aroma.light\")\n")
+    #     message("source(\"http://aroma-project.org/hbLite.R\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
     
   if(!requireNamespace("aroma.cn", quietly=TRUE) )
   {
-    cat("Package not found: aroma.cn. For download it:\n")
-    cat("hbInstall(\"aroma.cn\")\n") 
+    message("Package not found: aroma.cn. For download it:\n")
+    message("hbInstall(\"aroma.cn\")\n") 
     allpkg=FALSE
   }
   

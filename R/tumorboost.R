@@ -211,7 +211,7 @@ tumorboostPlot=function(ds,dsList,dataSetName,normalTumorArray,tumorSample,norma
     R.methodsS3::throw("Unknown platform: ", platform);
   }
   
-  cat("Saving graphics for sample ",R.filesets::getNames(dsC[tumorSample]),"\n")
+  message("Saving graphics for sample ",R.filesets::getNames(dsC[tumorSample]),"\n")
   
   #find ploidy for chromosome 23 and 24
   gender=findGender(R.oo::getName(dsC),normalSample,ugp)
@@ -324,7 +324,7 @@ tumorboostPlot=function(ds,dsList,dataSetName,normalTumorArray,tumorSample,norma
       stext(side=3, pos=1, chrTag); 
     }
     R.devices::devDone();
-    cat("*")
+    #cat("*")
     
     
   }##end boucle chromosome

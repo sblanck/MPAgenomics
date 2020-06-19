@@ -302,7 +302,7 @@ SingleStudyPlot=function(dataFolder)
     gsNtemp=extract(gsN,i)
     gsNtemp=R.filesets::getFile(gsNtemp,1)
         
-    cat("Saving graphics for sample",sampleName,"\n")
+    message("Saving graphics for sample",sampleName,"\n")
     
     for(chromosome in 1:25)
     {
@@ -398,9 +398,9 @@ SingleStudyPlot=function(dataFolder)
         stext(side=3, pos=0, label);
         stext(side=3, pos=1, chrTag); 
         R.devices::devDone();
-        cat("*")
+        #cat("*")
       } 
     }##end loop chromosome 
-    cat("\n")
+    #cat("\n")
   }##end loop sample
 }##end function

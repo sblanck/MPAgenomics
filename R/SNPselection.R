@@ -46,23 +46,23 @@ markerSelection=function(dataSetName,dataResponse,chromosome=1:22,signal=c("CN",
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-    #     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://www.braju.com/R/hbLite.R\")\n")
+    message(" hbLite(\"sfit\")\n")
+    message("source(\"http://bioconductor.org/biocLite.R\")\n")
+    message("biocLite(\"affxparser\")\n")
+    message("biocLite(\"DNAcopy\")\n")
+    message("biocLite(\"aroma.light\")\n")
+    #     message("source(\"http://aroma-project.org/hbLite.R\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
   
   
   if(!suppressPackageStartupMessages(requireNamespace("aroma.cn", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.cn. For download it:\n")
-    cat("install.packages(\"aroma.cn\")\n") 
+    message("Package not found: aroma.cn. For download it:\n")
+    message("install.packages(\"aroma.cn\")\n") 
     allpkg=FALSE
   }
   

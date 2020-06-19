@@ -83,7 +83,7 @@ addChipType=function(chipType,chipPath,verbose=TRUE)
     else
     {
       if(verbose)
-        cat(gsub("//","/",paste0("Folder \"","./annotationData/chipTypes/",chipType,"\" created.")),"\n")
+        message(gsub("//","/",paste0("Folder \"","./annotationData/chipTypes/",chipType,"\" created.")),"\n")
     }
   }
    
@@ -142,7 +142,7 @@ addData=function(dataSetName,dataPath,chipType,verbose=TRUE)
     else
     {
       if(verbose)
-        cat(gsub("//","/",paste0("Folder \"",".","/rawData/",dataSetName,"/",chipType,"\" created.")),"\n")
+        message(gsub("//","/",paste0("Folder \"",".","/rawData/",dataSetName,"/",chipType,"\" created.")),"\n")
     }
   }
   
