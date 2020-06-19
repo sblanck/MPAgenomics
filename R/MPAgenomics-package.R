@@ -1,4 +1,4 @@
-#' @import R.utils changepoint glmnet HDPenReg spikeslab devtools drat
+#' @import R.utils changepoint glmnet HDPenReg spikeslab
 #' @importFrom graphics axis lines par points
 #' @importFrom stats lm mad median optim sd var
 #' @importFrom utils head read.csv write.table

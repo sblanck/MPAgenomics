@@ -102,7 +102,7 @@ install.packages("aroma.cn")
 		\subsection{Download a toy data-set}	
 	
 			The example is based on a free data-set containing 8 .CEL files (251Mo) which can be downloaded from the Broad Institute website, following this link:
-			\url{http://www.broadinstitute.org/mpg/birdsuite/downloads/birdsuite_inputs_1.5.3.tgz}
+			\url{https://nextcloud.univ-lille.fr/remote.php/webdav/MPAgenomics/BirdSuite/birdsuite_input.tgz}
 			If you are used to decompress .tgz files, extract this file and copy the following command in the R console, replacing the path to the directory where the raw data (.CEL files) are stored with the appropriate one. Note that we deliberately use ``/'' and not ``$\backslash$'' in \texttt{celPATH}. If you copy paste paths from Windows (e.g. looking at properties of the directory), you must change ``$\backslash$'' by ``/'' or ``$\backslash\backslash$''.
 	
 <<eval=FALSE>>=
@@ -127,7 +127,7 @@ In this example, the directory pointed by celPATH must contain the files shown i
 workdir="/home/user/Documents/workdir"
 setwd(workdir)
 #download file
-download.file("http://www.broadinstitute.org/mpg/birdsuite/downloads/birdsuite_inputs_1.5.3.tgz",
+download.file("https://nextcloud.univ-lille.fr/remote.php/webdav/MPAgenomics/BirdSuite/birdsuite_input.tgz",
 destfile="./CELdata.tgz")
 #untar the file
 untar("./CELdata.tgz",files="cel",exdir=".")
