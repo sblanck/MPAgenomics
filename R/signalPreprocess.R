@@ -37,13 +37,12 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
     message("Package not found: aroma.affymetrix. For download it:\n")
-    message("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    message(" hbLite(\"sfit\")\n")
-    message("source(\"http://bioconductor.org/biocLite.R\")\n")
-    message("biocLite(\"affxparser\")\n")
-    message("biocLite(\"DNAcopy\")\n")
-    message("biocLite(\"aroma.light\")\n")
-#     message("source(\"http://aroma-project.org/hbLite.R\")\n")
+    message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
+    message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
+    message("install.packages(\"BiocManager\")\n")
+    message("BiocManager::install(\"affxparser\")\n")
+    message("BiocManager::install(\"DNAcopy\")\n")
+    message("BiocManager::install(\"aroma.light\")\n")
     message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
@@ -212,13 +211,12 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   if(!requireNamespace("aroma.affymetrix", quietly=TRUE) )
   {
     message("Package not found: aroma.affymetrix. For download it:\n")
-    message("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    message(" hbLite(\"sfit\")\n")
-    message("source(\"http://bioconductor.org/biocLite.R\")\n")
-    message("biocLite(\"affxparser\")\n")
-    message("biocLite(\"DNAcopy\")\n")
-    message("biocLite(\"aroma.light\")\n")
-    #     message("source(\"http://aroma-project.org/hbLite.R\")\n")
+    message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
+    message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
+    message("install.packages(\"BiocManager\")\n")
+    message("BiocManager::install(\"affxparser\")\n")
+    message("BiocManager::install(\"DNAcopy\")\n")
+    message("BiocManager::install(\"aroma.light\")\n")
     message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
@@ -226,7 +224,7 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   if(!requireNamespace("aroma.cn", quietly=TRUE) )
   {
     message("Package not found: aroma.cn. For download it:\n")
-    message("hbInstall(\"aroma.cn\")\n") 
+    message("install.packages(\"aroma.cn\")\n")
     allpkg=FALSE
   }
   
