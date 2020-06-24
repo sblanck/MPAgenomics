@@ -194,15 +194,14 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
 {
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-    #     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
+    message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
+    message("install.packages(\"BiocManager\")\n")
+    message("BiocManager::install(\"affxparser\")\n")
+    message("BiocManager::install(\"DNAcopy\")\n")
+    message("BiocManager::install(\"aroma.light\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
   
@@ -295,15 +294,14 @@ createArchitecture=function(dataSetName,chipType,dataSetPath,chipFilesPath,path=
 {
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-    #     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
+    message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
+    message("install.packages(\"BiocManager\")\n")
+    message("BiocManager::install(\"affxparser\")\n")
+    message("BiocManager::install(\"DNAcopy\")\n")
+    message("BiocManager::install(\"aroma.light\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
 #   else

@@ -36,15 +36,14 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    cat("Package not found: aroma.affymetrix. For download it:\n")
-    cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
-    cat(" hbLite(\"sfit\")\n")
-    cat("source(\"http://bioconductor.org/biocLite.R\")\n")
-    cat("biocLite(\"affxparser\")\n")
-    cat("biocLite(\"DNAcopy\")\n")
-    cat("biocLite(\"aroma.light\")\n")
-#     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
-    cat("install.packages(\"aroma.affymetrix\")\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
+    message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
+    message("install.packages(\"BiocManager\")\n")
+    message("BiocManager::install(\"affxparser\")\n")
+    message("BiocManager::install(\"DNAcopy\")\n")
+    message("BiocManager::install(\"aroma.light\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
 #   else
@@ -211,6 +210,7 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   allpkg=TRUE
   if(!requireNamespace("aroma.affymetrix", quietly=TRUE) )
   {
+<<<<<<< HEAD
     cat("Package not found: aroma.affymetrix. For download it:\n")
     cat("source(\"http://www.braju.com/R/hbLite.R\")\n")
     cat(" hbLite(\"sfit\")\n")
@@ -220,13 +220,28 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
     cat("biocLite(\"aroma.light\")\n")
     #     cat("source(\"http://aroma-project.org/hbLite.R\")\n")
     cat("install.packages(\"aroma.affymetrix\")\n")
+=======
+    message("Package not found: aroma.affymetrix. For download it:\n")
+    message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
+    message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
+    message("install.packages(\"BiocManager\")\n")
+    message("BiocManager::install(\"affxparser\")\n")
+    message("BiocManager::install(\"DNAcopy\")\n")
+    message("BiocManager::install(\"aroma.light\")\n")
+    message("install.packages(\"aroma.affymetrix\")\n")
+>>>>>>> 8e1bf63... Correction message package installation
     allpkg=FALSE
   }
     
   if(!requireNamespace("aroma.cn", quietly=TRUE) )
   {
+<<<<<<< HEAD
     cat("Package not found: aroma.cn. For download it:\n")
     cat("hbInstall(\"aroma.cn\")\n") 
+=======
+    message("Package not found: aroma.cn. For download it:\n")
+    message("install.packages(\"aroma.cn\")\n")
+>>>>>>> 8e1bf63... Correction message package installation
     allpkg=FALSE
   }
   
