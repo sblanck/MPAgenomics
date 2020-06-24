@@ -82,12 +82,12 @@ vignette("MPAgenomics")
 	
 \begin{scriptsize}
 <<eval=FALSE>>=
-source("http://www.braju.com/R/hbLite.R")
-hbLite("sfit")
-source("http://bioconductor.org/biocLite.R")
-biocLite("affxparser")
-biocLite("DNAcopy")
-biocLite("aroma.light")
+source('http://callr.org/install#HenrikBengtsson/sfit')
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("affxparser")
+BiocManager::install("DNAcopy")
+BiocManager::install("aroma.light")
 install.packages("aroma.affymetrix")
 install.packages("aroma.cn")
 @	
@@ -101,8 +101,8 @@ install.packages("aroma.cn")
 	
 		\subsection{Download a toy data-set}	
 	
-			The example is based on a free data-set containing 8 .CEL files (251Mo) which can be downloaded from the Broad Institute website, following this link:
-			\url{https://nextcloud.univ-lille.fr/remote.php/webdav/MPAgenomics/BirdSuite/birdsuite_input.tgz}
+			The example is based on a free data-set containing 8 .CEL files (251Mo) which can be downloaded, following this link:
+			\url{https://nextcloud.univ-lille.fr/index.php/s/gxGr83BRMAJCBXd}
 			If you are used to decompress .tgz files, extract this file and copy the following command in the R console, replacing the path to the directory where the raw data (.CEL files) are stored with the appropriate one. Note that we deliberately use ``/'' and not ``$\backslash$'' in \texttt{celPATH}. If you copy paste paths from Windows (e.g. looking at properties of the directory), you must change ``$\backslash$'' by ``/'' or ``$\backslash\backslash$''.
 	
 <<eval=FALSE>>=
@@ -118,7 +118,7 @@ In this example, the directory pointed by celPATH must contain the files shown i
 				\label{dfSingle2}
 			\end{figure}
 	
-			If it is not the case, e.g. if you do not know how to download and extract .tgz files (e.g. via a right click) , you can use the following commands in the R console:
+			If it is not the case, e.g. if you do not know how to extract .tgz files (e.g. via a right click), first, put the birdsuite\_input.tgz file in your working directory (workdir) and then use the following commands in the R console:
 	
 	
 			\begin{scriptsize}
@@ -126,11 +126,8 @@ In this example, the directory pointed by celPATH must contain the files shown i
 #set your working directory (replace with the appropriate path)
 workdir="/home/user/Documents/workdir"
 setwd(workdir)
-#download file
-download.file("https://nextcloud.univ-lille.fr/remote.php/webdav/MPAgenomics/BirdSuite/birdsuite_input.tgz",
-destfile="./CELdata.tgz")
 #untar the file
-untar("./CELdata.tgz",files="cel",exdir=".")
+untar("./birdsuite_input.tgz",exdir="cel")
 #indicate the path containing .cel files
 celPATH="./cel"
 @
@@ -157,7 +154,7 @@ chipPATH="/home/user/Documents/workdir/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSN
 unzip("./genomewidesnp6_libraryfile.zip",
  files=c("CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/GenomeWideSNP_6.Full.cdf"),exdir=".")
 #indicate the path containing .cdf files
-chipPATH="./home/user/Documents/workdir/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/"
+chipPATH="/home/user/Documents/workdir/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/"
 @		
 			\end{scriptsize}
 
