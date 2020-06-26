@@ -192,6 +192,7 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
 #@author Quentin Grimonprez
 .checkChipType=function(chipType,tag,path)
 {
+  allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
     message("Package not found: aroma.affymetrix. For download it:\n")
@@ -204,6 +205,9 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
     message("install.packages(\"aroma.affymetrix\")\n")
     allpkg=FALSE
   }
+  
+  if(!allpkg)
+    stop("You have to install some packages : Follow the printed informations.")
   
   requireNamespace("aroma.core")
   

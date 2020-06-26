@@ -223,6 +223,8 @@ dir(chipPATH)
 dir(celPATH) 
 #set your working directory (where you have rights to write)
 setwd(workdir) 
+#load aroma.arrymetrix package
+library(aroma.affymetrix)
 #normalize data (might take several hours)
 signalPreProcess(dataSetName="datatest1", chipType="GenomeWideSNP_6",
 dataSetPath=celPATH,chipFilesPath=chipPATH, path=".",
@@ -269,12 +271,12 @@ onlySNP=TRUE,loss="linear")
 #get the file names of our data-set
 files=getListOfFiles("datatest1")
 #create the data.frame linking normal and tumor files
-normalTumorArray=data.frame(normal=rep(files[1],7),tumor=files[2:8])
+normalTumorArray=data.frame(normal=files[1:4],tumor=files[5:8])
 @	
 	
 				\begin{figure}[!h]
 					\centering
-					\includegraphics[width=0.8\textwidth]{fig/normalTumorArrayExample}
+					\includegraphics[width=0.8\textwidth]{fig/normalTumorArrayExample_2}
 					\caption{CSV file linking normal sample with tumoral sample.}
 				\end{figure}
 
@@ -303,7 +305,7 @@ normalTumorArray=normalTumorArray, createArchitecture=FALSE, savePlot=TRUE, tags
 				To perform the segmentation on the allele B fraction, run the following command
 <<eval=FALSE>>=
 #run the segmentation
-segfracB=segFracBSignal("datatest1",chromosome=c(1,5))
+segfracB=segFracBSignal("datatest2",chromosome=c(1,5),normalTumorArray = normalTumorArray)
 #print summary of segmentation
 segfracB
 @					
@@ -777,7 +779,7 @@ savePlot=TRUE)
 		
 <<eval=FALSE>>=
 file="GIGAS_g_GAINmixHapMapAffy2_GenomeWideEx_6_A02_31234"
-seg1=segmentationAroma("datatest1",chromosome=21:22,onlySNP=TRUE,plot=TRUE,
+seg1=segmentationAroma("datatest1",chromosome=21:22,onlySNP=TRUE,savePlot=TRUE,
 listOfFiles=file)
 @
 		
@@ -865,7 +867,7 @@ savePlot=TRUE,verbose=TRUE)
 file="GIGAS_g_GAINmixHapMapAffy2_GenomeWideEx_6_A07_31314"
 CNdata1=getCopyNumberSignal("datatest1",20,onlySNP=TRUE,listOfFiles=file)
 copyNumber=CNdata1$chr20$GIGAS_g_GAINmixHapMapAffy2_GenomeWideEx_6_A07_31314
-position=CNdata$chr20$position
+position=CNdata1$chr20$position
 @
 	
 		Then, the segmentation process can be run using:

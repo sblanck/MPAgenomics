@@ -17,6 +17,7 @@ Description: Preprocess and analysis of genomic data. 'MPAgenomics'
 License: GPL(>=2)
 Encoding: UTF-8
 Copyright: Inria 2012-2020.
+biocViews:
 Imports:
     R.utils,changepoint(>= 1.1),glmnet,HDPenReg(>= 0.90),spikeslab
 Suggests:
