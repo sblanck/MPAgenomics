@@ -35,7 +35,7 @@ getCopyNumberSignal=function(dataSetName,chromosome,normalTumorArray,onlySNP=FAL
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
   {
-    mmessage("Package not found: aroma.affymetrix. For download it:\n")
+    message("Package not found: aroma.affymetrix. For download it:\n")
     message("source(\"http://callr.org/install#HenrikBengtsson/sfit\")\n")
     message("if (!requireNamespace(\"BiocManager\", quietly = TRUE))\n")
     message("install.packages(\"BiocManager\")\n")
