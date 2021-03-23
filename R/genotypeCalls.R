@@ -369,6 +369,8 @@ SingleStudyPlot=function(dataFolder)
         ylim <- c(0,6);
         ylab <- "Copy number";
         
+        opar <- par(no.readonly =TRUE)      
+        on.exit(par(opar))      
         fig <- R.devices::devNew("png", pathname, label=figName, width=width, height=2*aspect*width);
         par(mfrow=c(2,1))
         
