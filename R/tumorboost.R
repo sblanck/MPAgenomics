@@ -291,6 +291,8 @@ tumorboostPlot=function(ds,dsList,dataSetName,normalTumorArray,tumorSample,norma
     ylab <- "Copy number";
     
     # Plot total CNs
+    opar <- par(no.readonly =TRUE)      
+    on.exit(par(opar))      
     fig <- R.devices::devNew("png", pathname, label=figName, width=width, height=4*aspect*width);
     par(mfrow=c(4,1))
     par(mar=c(2.7,2.5,1.1,1)+0.1, tcl=-0.3, mgp=c(1.4,0.4,0), cex=2);
