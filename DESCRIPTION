@@ -3,7 +3,7 @@ Type: Package
 Title: Multi-Patient Analysis of Genomic Markers
 Version: 1.2.1
 Date: 2021-03-23
-Authors@R: 
+Authors@R:
   c(person(given = "Quentin",
            family = "Grimonprez",
            role = c("aut", "cre")),
