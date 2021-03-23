@@ -234,6 +234,7 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   if(createArchitecture==TRUE)
   {
     actualPath=getwd()
+    on.exit(setwd(actualPath))
     createArchitecture(dataSetName,chipType,dataSetPath,chipFilesPath,path,TRUE,tags)
     
     #move to the path of the created Architecture

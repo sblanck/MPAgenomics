@@ -212,6 +212,7 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
   requireNamespace("aroma.core")
   
   actualPath=getwd()
+  on.exit(setwd(actualPath))
   setwd(path)
   result <- try(cdf <- aroma.affymetrix::AffymetrixCdfFile$byChipType(chipType, tags=tag),silent=TRUE)
   if(class(result)[1]=="try-error")
