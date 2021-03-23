@@ -3,9 +3,8 @@ Type: Package
 Title: Multi-Patient Analysis of Genomic Markers
 Version: 1.2
 Date: 2020-06-26
-Author: Quentin Grimonprez with contributions from Guillemette Marot and Samuel
-    Blanck. Some functions use code created by Sjoerd Vosse, Mark van de Wiel,
-    Pierre Neuvial, Henrik Bengtsson.
+Author: Quentin Grimonprez[aut, cre], Sjoerd Vosse [aut], Mark van de Wiel [aut],
+    Pierre Neuvial [aut], Henrik Bengtsson [aut], Samuel Blanck [ctb] Guillemette Marot [ctb]
 Maintainer: Samuel Blanck <samuel.blanck@univ-lille.fr>
 Description: Preprocess and analysis of genomic data. 'MPAgenomics'
     provides wrappers from commonly used packages to streamline their repeated
