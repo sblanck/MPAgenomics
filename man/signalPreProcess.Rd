@@ -10,7 +10,6 @@ signalPreProcess(
   normalTumorArray,
   dataSetPath,
   chipFilesPath = dataSetPath,
-  path = ".",
   createArchitecture = TRUE,
   savePlot = TRUE,
   tags = NULL
@@ -28,8 +27,6 @@ The first column contains the name of normal files and the second the names of a
 \item{dataSetPath}{(only if createArchitecture=TRUE) Path to the folder containing the CEL files of the data-set.}
 
 \item{chipFilesPath}{(only if createArchitecture=TRUE) Path to the folder containing all the annotations files for the specified chip type.}
-
-\item{path}{(only if createArchitecture=TRUE) Path where the architecture should be created (default=".").}
 
 \item{createArchitecture}{if TRUE, the aroma architecture will be automatically created (default=TRUE). 
 CEL files of the data and chip files will be copied (not moved).}

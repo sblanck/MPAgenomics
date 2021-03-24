@@ -171,7 +171,6 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
 #' The first column contains the name of normal files and the second the names of associated tumor files.
 #' @param dataSetPath (only if createArchitecture=TRUE) Path to the folder containing the CEL files of the data-set.
 #' @param chipFilesPath (only if createArchitecture=TRUE) Path to the folder containing all the annotations files for the specified chip type.
-#' @param path (only if createArchitecture=TRUE) Path where the architecture should be created (default=".").
 #' @param createArchitecture if TRUE, the aroma architecture will be automatically created (default=TRUE). 
 #' CEL files of the data and chip files will be copied (not moved).
 #' @param savePlot if TRUE, graphics of the CN signal and allele B fraction signal will be saved in the figures/signal folder.
@@ -204,7 +203,7 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
 #' @author Quentin Grimonprez
 #' 
 #' @export
-signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, chipFilesPath=dataSetPath, path=".", createArchitecture=TRUE, savePlot=TRUE, tags=NULL)
+signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, chipFilesPath=dataSetPath, createArchitecture=TRUE, savePlot=TRUE, tags=NULL)
 {
 
   allpkg=TRUE
@@ -233,12 +232,7 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   
   if(createArchitecture==TRUE)
   {
-    actualPath=getwd()
-    on.exit(setwd(actualPath))
-    createArchitecture(dataSetName,chipType,dataSetPath,chipFilesPath,path,TRUE,tags)
-    
-    #move to the path of the created Architecture
-    setwd(path)
+    createArchitecture(dataSetName,chipType,dataSetPath,chipFilesPath,TRUE,tags)
   }
 
   SignalNormalization(dataSetName,chipType,normalTumorArray,"naive",savePlot,tags)

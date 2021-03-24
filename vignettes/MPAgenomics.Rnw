@@ -227,8 +227,7 @@ setwd(workdir)
 library(aroma.affymetrix)
 #normalize data (might take several hours)
 signalPreProcess(dataSetName="datatest1", chipType="GenomeWideSNP_6",
-dataSetPath=celPATH,chipFilesPath=chipPATH, path=".",
-createArchitecture=TRUE, savePlot=TRUE, tags="Full")
+dataSetPath=celPATH,chipFilesPath=chipPATH, createArchitecture=TRUE, savePlot=TRUE, tags="Full")
 @	
 	
 			The first pipeline offered in \texttt{MPAgenomics} consists in the segmentation of every copy-number profile of the data. Then, a calling method can be applied on all the segments to label them (e.g. ``loss'', ``normal'', ``gain''). To perform segmentation and calling at the same time, type the following lines in your R console:

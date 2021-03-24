@@ -190,7 +190,7 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
 
 #check if the chipfiles are good
 #@author Quentin Grimonprez
-.checkChipType=function(chipType,tag,path)
+.checkChipType=function(chipType,tag)
 {
   allpkg=TRUE
   if(!suppressPackageStartupMessages(requireNamespace("aroma.affymetrix", quietly=TRUE) ) )
@@ -211,13 +211,9 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
   
   requireNamespace("aroma.core")
   
-  actualPath=getwd()
-  on.exit(setwd(actualPath))
-  setwd(path)
   result <- try(cdf <- aroma.affymetrix::AffymetrixCdfFile$byChipType(chipType, tags=tag),silent=TRUE)
   if(class(result)[1]=="try-error")
   {
-    setwd(actualPath)
     stop(geterrmessage())
     #stop(paste0("Problem with cdf files for the chip ",chipType," with tag ",tag))
   }
@@ -241,7 +237,6 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
   result <- try(gi <- aroma.affymetrix::getGenomeInformation(cdf),silent=TRUE)
   if(class(result)[1]=="try-error")
   {
-    setwd(actualPath)
     stop(geterrmessage())
     #stop(paste0("No ugp files for the chip ",chipType," with tag ",tag))
   }
@@ -249,7 +244,6 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
   result <- try(si <- aroma.affymetrix::getSnpInformation(cdf),silent=TRUE)
   if(class(result)[1]=="try-error")
   {
-    setwd(actualPath)
     stop(geterrmessage())
     #stop(paste0("No ufl files for the chip ",chipType," with tag ",tag))
   }
@@ -257,15 +251,12 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
   result <- try(acs <- aroma.core::AromaCellSequenceFile$byChipType(aroma.core::getChipType(cdf, fullname=FALSE)),silent=TRUE)
   if(class(result)[1]=="try-error")
   {
-    setwd(actualPath)
     stop(geterrmessage())
     #stop(paste0("No acs files for the chip ",chipType," with tag ",tag))
   }
 
   
-  setwd(actualPath)
-  
-  return(invisible(TRUE))
+ return(invisible(TRUE))
 }
 
 
@@ -316,7 +307,7 @@ createArchitecture=function(dataSetName,chipType,dataSetPath,chipFilesPath,path=
   
    createEmptyArchitecture(dataSetName,chipType,path,verbose)
    copyChipFiles(chipFilesPath,chipType,path,verbose)
-  .checkChipType(chipType,tags,path)
+  .checkChipType(chipType,tags)
    copyDataFiles(dataSetName,dataSetPath,chipType,path,verbose)
 
   
