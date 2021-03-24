@@ -112,15 +112,22 @@ install.packages("cghseg")
 \section{Starting example}
 
 		This introductory example aims at helping the user understand the main functions of the package. For more details on each step, we invite the user to read the appropriate section. 
+		
+		By default, the working directory is a temporary directory which is valid only during your R session. That means that your data will be lost when you quit R. If you want to change this directory, you can change the "workdir" variable accordindly.
+<<eval=FALSE>>=
+#Example of a working directory set up by the user
+#workdir="/home/user/Documents/workdir"
+workdir=tempdir()
+@
 	
 		\subsection{Download a toy data-set}	
 	
-			The example is based on a free data-set containing 8 .CEL files (251Mo) which can be downloaded from the Broad Institute website, following this link:
-			\url{http://www.broadinstitute.org/mpg/birdsuite/downloads/birdsuite_inputs_1.5.3.tgz}
-			If you are used to decompress .tgz files, extract this file and copy the following command in the R console, replacing the path to the directory where the raw data (.CEL files) are stored with the appropriate one. Note that we deliberately use ``/'' and not ``$\backslash$'' in \texttt{celPATH}. If you copy paste paths from Windows (e.g. looking at properties of the directory), you must change ``$\backslash$'' by ``/'' or ``$\backslash\backslash$''.
-	
+			The example is based on a free data-set containing 8 .CEL files (251Mo) which can be downloaded, following this link:
+			\url{https://nextcloud.univ-lille.fr/index.php/s/gxGr83BRMAJCBXd}
+			If you are used to decompress .tgz files, extract this file and copy the following command in the R console, replacing the path to the directory where the raw data (.CEL files) are stored with the appropriate one. Note that we deliberately use ``/'' and not ``$\backslash$'' in \texttt{celPATH}. If you copy paste paths from Windows (e.g. looking at properties of the directory), you must change ``$\backslash$'' by ``/'' or ``$\backslash\backslash$''. Furthermore, 
+
 <<eval=FALSE>>=
-celPATH="/home/user/Documents/workdir/CELdata/cel"
+celPATH=paste0(workdir,"/cel")
 @
 
 In this example, the directory pointed by celPATH must contain the files shown in Figure \ref{dfSingle2}.
@@ -138,7 +145,6 @@ In this example, the directory pointed by celPATH must contain the files shown i
 			\begin{scriptsize}
 <<eval=FALSE>>=
 #set your working directory (replace with the appropriate path)
-workdir="/home/user/Documents/workdir"
 setwd(workdir)
 #download file
 download.file("http://www.broadinstitute.org/mpg/birdsuite/downloads/birdsuite_inputs_1.5.3.tgz",
@@ -146,7 +152,7 @@ destfile="./CELdata.tgz")
 #untar the file
 untar("./CELdata.tgz",files="cel",exdir=".")
 #indicate the path containing .cel files
-celPATH="./cel"
+celPATH=paste0(workdir,"/cel")
 @
 			\end{scriptsize}
 
@@ -160,7 +166,7 @@ celPATH="./cel"
 			Extract these files and replace the following path with the appropriate one pointing to the folder containing the extracted .cdf files (only GenomeWideSNP\_6.Full.cdf is needed but you can leave the other files in the same folder):	
 		
 <<eval=FALSE>>=
-chipPATH="/home/user/Documents/workdir/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/"
+chipPATH=paste0(workdir,"/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/")
 @	
 			
 			If you do not know how to decompress .zip files, you can use the following commands in the R console for convenience:
@@ -171,7 +177,7 @@ chipPATH="/home/user/Documents/workdir/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSN
 unzip("./genomewidesnp6_libraryfile.zip",
  files=c("CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/GenomeWideSNP_6.Full.cdf"),exdir=".")
 #indicate the path containing .cdf files
-chipPATH="./home/user/Documents/workdir/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/"
+chipPATH=paste0(workdir,"/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/")
 @		
 			\end{scriptsize}
 
