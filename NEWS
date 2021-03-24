@@ -1,3 +1,10 @@
+Version 1.2.1 (24-03-2021)
+- Remove setwd in functions
+- Add Ilari Scheinin as contributor
+- Add dontrun tag for examples
+- Update vignette to write files in tempdir() directory by default
+- add on.exit() to preserve par() settings in functions
+
 Version 1.2 (18-06-2020)
 - remove cghseg fonctionnalities for CRAN submission
 
