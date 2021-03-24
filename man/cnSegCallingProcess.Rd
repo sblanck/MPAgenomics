@@ -56,9 +56,11 @@ This function applies the PELT method to segment each signal of the dataset and 
 Results will be stored in a text file in the segmentation folder of the aroma architecture.
 }
 \examples{
+\dontrun{
 #DO NOT EXECUTE before reading the vignette
-# seg1=cnSegCallingProcess("data1",normalTumorArray,chromosome=20:21)
-# seg2=cnSegCallingProcess("data2",chromosome=20:21)
+seg1=cnSegCallingProcess("data1",normalTumorArray,chromosome=20:21)
+seg2=cnSegCallingProcess("data2",chromosome=20:21)
+}
 
 }
 \author{

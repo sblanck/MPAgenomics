@@ -33,8 +33,10 @@ The aroma architecture must be respected. The working directory must contain raw
 To easily access the names of the files available in a dataset, one can use the \link{getListOfFiles} function.
 }
 \examples{
+\dontrun{
 #DO NOT EXECUTE before reading the vignette
-#fracB=getGenotypeCalls("data1",5)
+fracB=getGenotypeCalls("data1",5)
+}
 
 }
 \author{

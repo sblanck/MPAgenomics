@@ -42,9 +42,12 @@ The aroma architecture must be respected. The working directory must contain raw
 To easily access the names of the files available in a dataset, one can use the \link{getListOfFiles} function.
 }
 \examples{
+\dontrun{
 #DO NOT EXECUTE before reading the vignette
-#fracB=getFracBSignal("data1",5,normalTumorArray)
-#fracB=getFracBSignal("data2",5)
+  fracB=getFracBSignal("data1",5,normalTumorArray)
+  fracB=getFracBSignal("data2",5)
+}
+
 
 }
 \author{

@@ -42,9 +42,11 @@ The aroma architecture must be respected. The working directory must contain raw
 To easily access the names of the files available in a dataset, one can use the \link{getListOfFiles} function.
 }
 \examples{
-#DO NOT EXECUTE
-#fracB=getSymFracBSignal("data1",5,normalTumorArray)
-#fracB=getSymFracBSignal("data2",5)
+\dontrun{
+#DO NOT EXECUTE before reading the vignette
+fracB=getSymFracBSignal("data1",5,normalTumorArray)
+fracB=getSymFracBSignal("data2",5)
+}
 
 }
 \author{
