@@ -30,9 +30,11 @@
 #' }
 #'
 #' @examples
+#' \dontrun{
 #' #DO NOT EXECUTE before reading the vignette
-#' # seg1=cnSegCallingProcess("data1",normalTumorArray,chromosome=20:21)
-#' # seg2=cnSegCallingProcess("data2",chromosome=20:21)
+#' seg1=cnSegCallingProcess("data1",normalTumorArray,chromosome=20:21)
+#' seg2=cnSegCallingProcess("data2",chromosome=20:21)
+#' }
 #'
 #' @export
 #' 

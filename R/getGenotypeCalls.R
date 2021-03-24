@@ -21,8 +21,10 @@
 #' 
 #' 
 #' @examples 
+#' \dontrun{
 #' #DO NOT EXECUTE before reading the vignette
-#' #fracB=getGenotypeCalls("data1",5)
+#' fracB=getGenotypeCalls("data1",5)
+#' }
 #' 
 #' @author Quentin Grimonprez
 #' 

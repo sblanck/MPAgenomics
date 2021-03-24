@@ -23,9 +23,12 @@
 #'  
 #' 
 #' @examples 
+#' \dontrun{
 #' #DO NOT EXECUTE before reading the vignette
-#' #fracB=getFracBSignal("data1",5,normalTumorArray)
-#' #fracB=getFracBSignal("data2",5)
+#'   fracB=getFracBSignal("data1",5,normalTumorArray)
+#'   fracB=getFracBSignal("data2",5)
+#' }
+#' 
 #'
 #' @author Quentin Grimonprez
 #'

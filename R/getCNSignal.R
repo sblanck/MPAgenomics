@@ -23,10 +23,11 @@
 #' To easily access the names of the files available in a dataset, one can use the \link{getListOfFiles} function.
 #' 
 #' @examples 
+#' \dontrun{
 #' #DO NOT EXECUTE before reading the vignette
-#' #C=getCopyNumberSignal("data1",5,normalTumorArray,TRUE)
-#' #C=getCopyNumberSignal("data2",5,onlySNP=TRUE)
-#'
+#'   C=getCopyNumberSignal("data1",5,normalTumorArray,TRUE)
+#'   C=getCopyNumberSignal("data2",5,onlySNP=TRUE)
+#' }
 #' @author Quentin Grimonprez
 #'
 #' @export 

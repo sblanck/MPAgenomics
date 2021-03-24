@@ -289,8 +289,10 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
 #' Multiples tags must be separated by a comma. If there is no tag, the pattern is <chipType>.cdf
 #' 
 #' @examples
-#' #DO NOT EXECUTE before reading of the vignette
-#' #createArchitecture("test1","GenomeWideSNP_6","./celPATH","./chipPATH",path=".",TRUE,"Full")
+#' \dontrun{
+#' #DO NOT EXECUTE before reading the vignette
+#'   createArchitecture("test1","GenomeWideSNP_6","./celPATH","./chipPATH",path=".",TRUE,"Full")
+#' }
 #' 
 #' @author Quentin Grimonprez
 #' 
