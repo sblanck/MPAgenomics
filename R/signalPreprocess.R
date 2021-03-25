@@ -232,7 +232,7 @@ signalPreProcess=function(dataSetName, chipType, normalTumorArray, dataSetPath, 
   
   if(createArchitecture==TRUE)
   {
-    createArchitecture(dataSetName,chipType,dataSetPath,chipFilesPath,TRUE,tags)
+    createArchitecture(dataSetName,chipType,dataSetPath,chipFilesPath,verbose=TRUE,tags=tags)
   }
 
   SignalNormalization(dataSetName,chipType,normalTumorArray,"naive",savePlot,tags)
