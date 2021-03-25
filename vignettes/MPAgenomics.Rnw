@@ -104,6 +104,7 @@ install.packages("aroma.cn")
 #Example of a working directory set up by the user
 #workdir="/home/user/Documents/workdir"
 workdir=tempdir()
+setwd(workdir)
 @
 	
 		\subsection{Download a toy data-set}	
@@ -130,12 +131,10 @@ In this example, the directory pointed by celPATH must contain the files shown i
 	
 			\begin{scriptsize}
 <<eval=FALSE>>=
-#set your working directory (replace with the appropriate path)
-setwd(workdir)
 #untar the file
+download.file("https://nextcloud.univ-lille.fr/index.php/s/gxGr83BRMAJCBXd/download",
+  paste0(workdir,"/birdsuite_input.tgz"))
 untar("./birdsuite_input.tgz",exdir="cel")
-#indicate the path containing .cel files
-celPATH=paste0(workdir,"/cel")
 @
 			\end{scriptsize}
 
@@ -157,6 +156,8 @@ chipPATH=paste0(workdir,"/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/
 			\begin{scriptsize}
 <<eval=FALSE>>=
 #unzip required files
+download.file("http://www.affymetrix.com/Auth/support/downloads/library_files/genomewidesnp6_libraryfile.zip",
+  destfile = paste0(workdir,"/genomewidesnp6_libraryfile.zip"))
 unzip("./genomewidesnp6_libraryfile.zip",
  files=c("CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/GenomeWideSNP_6.Full.cdf"),exdir=".")
 #indicate the path containing .cdf files
@@ -175,17 +176,15 @@ chipPATH=paste0(workdir,"/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/
 			\end{figure}			
 			
 
-%			Because names of cdf files in the aroma architecture must have the following format: \\
-%			<chip type>,<tags>.cdf.
+			Because names of cdf files in the aroma architecture must have the following format: \\
+<chip type>,<tags>.cdf.
 		
-%			So, we have to change \texttt{GenomeWideSNP\_6.Full.cdf} into \texttt{GenomeWideSNP\_6,Full.cdf}.
-%			\begin{small}
-%				\begin{verbatim}
-%			chipPATH=paste0(exdirChip,"/CD_GenomeWideSNP_6_rev3/Full/GenomeWideSNP_6/LibFiles/")
-%			renameFile(paste0(chipPATH,"GenomeWideSNP_6.Full.cdf"),paste0(chipPATH,"GenomeWideSNP_6,Full.cdf"))
-%				\end{verbatim}
-%			\end{small}
-%		cela devrait etre inclus dans l'architecture		
+			So, we have to change \texttt{GenomeWideSNP\_6.Full.cdf} into \texttt{GenomeWideSNP\_6,Full.cdf}.
+
+<<eval=FALSE>>=
+renameFile(paste0(chipPATH,"GenomeWideSNP_6.Full.cdf"),paste0(chipPATH,"GenomeWideSNP_6,Full.cdf"))
+@
+		
 	
 			If you do not know how to download or decompress .gz files, you can use the following commands in the R console for convenience:
 	
@@ -202,8 +201,7 @@ download.file("http://www.aroma-project.org/data/annotationData/chipTypes/Genome
 destfile="GenomeWideSNP_6,HB20080710.acs.gz")
 #unzip the gz files
 #install R.utils package containing the gunzip function
-install.packages("R.utils")
-library("R.utils")
+library(R.utils)
 gunzip("GenomeWideSNP_6,Full,na31,hg19,HB20110328.ufl.gz",
 destname="GenomeWideSNP_6,Full,na31,hg19,HB20110328.ufl")
 gunzip("GenomeWideSNP_6,Full,na31,hg19,HB20110328.ugp.gz",
