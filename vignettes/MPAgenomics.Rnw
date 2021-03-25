@@ -214,7 +214,6 @@ destfile="GenomeWideSNP_6,Full,na31,hg19,HB20110328.ugp.gz")
 download.file("http://www.aroma-project.org/data/annotationData/chipTypes/GenomeWideSNP_6/GenomeWideSNP_6,HB20080710.acs.gz", 
 destfile="GenomeWideSNP_6,HB20080710.acs.gz")
 #unzip the gz files
-#install R.utils package containing the gunzip function
 library(R.utils)
 gunzip("GenomeWideSNP_6,Full,na31,hg19,HB20110328.ufl.gz",
 destname="GenomeWideSNP_6,Full,na31,hg19,HB20110328.ufl")
