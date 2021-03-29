@@ -1,3 +1,8 @@
+Version 1.2.2 (29-03-2021)
+- Correction CITATION file (including new URL)
+- Add reference in description field in THE DESCRIPTION file
+
+
 Version 1.2.1 (24-03-2021)
 - Remove setwd in functions
 - Add Ilari Scheinin as contributor
