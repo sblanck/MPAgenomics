@@ -1,8 +1,8 @@
 Package: MPAgenomics
 Type: Package
 Title: Multi-Patient Analysis of Genomic Markers
-Version: 1.2.1
-Date: 2021-03-24
+Version: 1.2.2
+Date: 2021-03-29
 Author: Quentin Grimonprez [aut,cre], Sjoerd Vosse [ctb], Mark Van de Wiel [ctb], Pierre Neuvial [ctb], Henrik Bengtsson [ctb], Ilari Scheinin [ctb], Guillemette Marot [ctb], Samuel Blanck [ctb]
 Maintainer: Samuel Blanck <samuel.blanck@univ-lille.fr>
 Description: Preprocess and analysis of genomic data. 'MPAgenomics'
@@ -12,6 +12,7 @@ Description: Preprocess and analysis of genomic data. 'MPAgenomics'
     parameters involved in the wrapped packages. Considering multiple profiles
     in the same time, 'MPAgenomics' wraps efficient penalized regression methods
     to select relevant markers associated with a given outcome.
+    Grimonprez et al. (2014) <doi:10.1186/s12859-014-0394-y>.
 License: GPL(>=2)
 Encoding: UTF-8
 Copyright: Inria 2012-2020.
