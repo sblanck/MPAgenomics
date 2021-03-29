@@ -14,5 +14,5 @@ citEntry(entry = "unpublished",
                              as.person("Guillemette Marot")),
          year = "2014",
          note = "Preprint",
-         url = "http://hal.inria.fr/hal-00933614",
+         url = "https://hal.inria.fr/hal-00933614",
          textVersion = paste0("Quentin Grimonprez, Alain Celisse, Meyling Cheok, Martin Figeac, Guillemette Marot"," (2014). ", "MPAgenomics : An R package for multi-patient analysis of genomic markers",". "))
