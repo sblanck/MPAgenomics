@@ -38,6 +38,9 @@ CEL files of the data and chip files will be copied (not moved).}
 
 \item{tags}{Common tag which appears in the different file names (cdf, ugp, ufl) of the chip. For no tag, use tags=NULL (default = NULL). See details for more information.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 normalization process for estimating raw copy-numbers and allele B fraction.
 }

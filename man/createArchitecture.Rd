@@ -29,6 +29,9 @@ createArchitecture(
 
 \item{tags}{Common tag which appears in the different file names (cdf, ugp, ufl) of the chip. For no tag, use tags=NULL (default = NULL). See details for more information.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Create the architecture required by aroma.* packages and copy files into created folders.
 }
