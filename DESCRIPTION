@@ -3,9 +3,36 @@ Type: Package
 Title: Multi-Patient Analysis of Genomic Markers
 Version: 1.2.3
 Date: 2021-03-30
-Author: Quentin Grimonprez [aut,cre], Sjoerd Vosse [ctb], Mark Van de Wiel [ctb], Pierre Neuvial [ctb], Henrik Bengtsson [ctb], Ilari Scheinin [ctb], Guillemette Marot [ctb], Samuel Blanck [ctb]
+Authors@R: 
+  c(person(given = "Quentin",
+           family = "Grimonprez",
+           role = "aut"),
+    person(given = "Sjoerd",
+           family = "Vosse",
+           role = "ctb"),
+    person(given = "Mark",
+           family = "van de Wiel",
+           role = "ctb"),
+    person(given = "Pierre",
+           family = "Neuvial",
+           role = "ctb"),
+    person(given = "Henrik",
+           family = "Bengtsson",
+           role = "ctb"),
+    person(given = "Ilari",
+           family = "Scheinin",
+           role = "ctb"),
+    person(given = "Guillemette",
+           family = "Marot",
+           role = "ctb"),
+    person(given = "Samuel",
+           family = "Blanck",
+           role = c("aut", "cre"),
+           email = "samuel.blanck@univ-lille.fr"),
+    person(given = "Inria",
+           role = "cph"))
 Maintainer: Samuel Blanck <samuel.blanck@univ-lille.fr>
-Description: Preprocess and analysis of genomic data. 'MPAgenomics'
+Description: Preprocessing and analysis of genomic data. 'MPAgenomics'
     provides wrappers from commonly used packages to streamline their repeated
     manipulation, offering an easy-to-use pipeline. The segmentation of
     successive multiple profiles is performed with an automatic choice of
@@ -15,7 +42,6 @@ Description: Preprocess and analysis of genomic data. 'MPAgenomics'
     Grimonprez et al. (2014) <doi:10.1186/s12859-014-0394-y>.
 License: GPL(>=2)
 Encoding: UTF-8
-Copyright: Inria 2012-2020.
 biocViews:
 Imports:
     R.utils,changepoint(>= 1.1),glmnet,HDPenReg(>= 0.90),spikeslab
