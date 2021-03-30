@@ -15,6 +15,9 @@ createEmptyArchitecture(dataSetName, chipType, path = ".", verbose = TRUE)
 
 \item{verbose}{if TRUE, print details of the process}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Create the architecture required by aroma packages
 }

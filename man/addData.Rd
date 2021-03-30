@@ -15,6 +15,9 @@ addData(dataSetName, dataPath, chipType, verbose = TRUE)
 
 \item{verbose}{Print additionnal information.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Create a folder in "rawData" and copy the specified files in this folder.
 }

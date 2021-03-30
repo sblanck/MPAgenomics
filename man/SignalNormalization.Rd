@@ -27,6 +27,9 @@ The first column contains the name of normal files and the second the names of a
 
 \item{tags}{Common tag which appears in the different file names (cdf, ugp, ufl) of the chip. For no tag, use tags=NULL (default = NULL). See details for more information.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 low-level normalization process for estimating raw copy-numbers and allele B fraction.
 }
