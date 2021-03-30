@@ -9,7 +9,7 @@
 #' @param genotypeCallsMethod method used for genotypage, default is "naive".
 #' @param savePlot If TRUE, graphics of the CN signal and allele B fraction signal will be saved in the figures folder.
 #' @param tags Common tag which appears in the different file names (cdf, ugp, ufl) of the chip. For no tag, use tags=NULL (default = NULL). See details for more information.
-#' @return NULL
+#' @return No return value, called for side effects.
 #'
 #' @details The aroma architecture must be respected:
 #'    <working directory>
@@ -176,7 +176,7 @@ SignalNormalization<-function(dataFolder,chipType,normalTumorArray,genotypeCalls
 #' CEL files of the data and chip files will be copied (not moved).
 #' @param savePlot if TRUE, graphics of the CN signal and allele B fraction signal will be saved in the figures/signal folder.
 #' @param tags Common tag which appears in the different file names (cdf, ugp, ufl) of the chip. For no tag, use tags=NULL (default = NULL). See details for more information.
-#' 
+#' @return No return value, called for side effects.
 #' @details
 #' The following architecture must be used:
 #'   <working directory>

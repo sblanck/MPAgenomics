@@ -5,6 +5,7 @@
 #' @param chipType type of the chip used for obtaining the data 
 #' @param path path where folders are created
 #' @param verbose if TRUE, print details of the process
+#' @return No return value, called for side effects.
 #'
 #' @author Quentin Grimonprez
 #'
@@ -78,6 +79,7 @@ createEmptyArchitecture=function(dataSetName,chipType,path=".",verbose=TRUE)
 # @param chipName Type of the chip used for the data 
 # @param path Path where the rawData folder can be found
 # @param verbose if TRUE, print details of the process
+# @return No return value, called for side effects.
 #
 # @author Quentin Grimonprez
 
@@ -122,7 +124,7 @@ copyDataFiles=function(dataSetName,dataSetPath,chipName,path,verbose)
 # @param chipName type of the chip used for the data 
 # @param path path where to find rawData folder
 # @param verbose if TRUE, print details of the process
-#
+# @return No return value, called for side effects.
 #
 #@note WARNING : Files are copied, not moved.  Overwrite existing files with the same name.
 # All the chip files have the form : chipName,Tags.extension.
@@ -280,7 +282,7 @@ copyChipFiles=function(pathToChipFiles,chipName,path,verbose)
 #' @param path Path where the architecture should be created (default=".")
 #' @param verbose Print information during the process (default=FALSE)
 #' @param tags Common tag which appears in the different file names (cdf, ugp, ufl) of the chip. For no tag, use tags=NULL (default = NULL). See details for more information.
-#'
+#' @return No return value, called for side effects.
 #' @seealso copyChipFiles, copyDataFiles, createAromaArchitecture
 #' 
 #' @details
