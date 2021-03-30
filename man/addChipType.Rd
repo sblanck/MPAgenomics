@@ -11,7 +11,10 @@ addChipType(chipType, chipPath, verbose = TRUE)
 
 \item{chipPath}{Path to the files to add.}
 
-\item{verbose}{Print additionnal information}
+\item{verbose}{Print additionnal information.}
+}
+\value{
+No return value, called for side effects.
 }
 \description{
 Create a folder in "annotationData/chipTypes" and copy the specified files in this folder.
