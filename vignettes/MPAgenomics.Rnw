@@ -86,12 +86,12 @@ vignette("MPAgenomics")
 	
 \begin{scriptsize}
 <<eval=FALSE>>=
-source("http://www.braju.com/R/hbLite.R")
-hbLite("sfit")
-source("http://bioconductor.org/biocLite.R")
-biocLite("affxparser")
-biocLite("DNAcopy")
-biocLite("aroma.light")
+source('http://callr.org/install#HenrikBengtsson/sfit')
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("affxparser")
+BiocManager::install("DNAcopy")
+BiocManager::install("aroma.light")
 install.packages("aroma.affymetrix")
 install.packages("aroma.cn")
 @	
