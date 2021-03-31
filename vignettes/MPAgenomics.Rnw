@@ -415,7 +415,7 @@ createArchitecture("datatest1","GenomeWideSNP_6",celPATH,chipPATH,".",TRUE,"Full
     
     The minimal architecture contains 2 folders: \texttt{annotationData} and \texttt{rawData}. Some supplementary folders will be created during the execution of some functions.
 
-		In the \texttt{annotationData} folder, each type of chip used for the experiment has to have his own folder containing its definition files (.cdf) and other files (.ugp\footnote{See \url{http://www.aroma-project.org/node/43} for more details.}, .acs\footnote{See \url{http://www.aroma-project.org/node/100} for more details.}, .ufl\footnote{See \url{http://www.aroma-project.org/node/47} for more details.}). In this folder, every file name must comply with the following format <chipType>,<tags>.<extension>(see Fig. \ref{chipfile}).
+		In the \texttt{annotationData} folder, each type of chip used for the experiment has to have his own folder containing its definition files (.cdf) and other files (.ugp, .acs, .ufl). In this folder, every file name must comply with the following format <chipType>,<tags>.<extension>(see Fig. \ref{chipfile}).
 		
 		The \texttt{rawData} folder contains the different data-sets with the CEL files. Each data-set folder contains one or more folders (one per different chip type used) containing the CEL files, these files will not be modified during the process. Note that the \texttt{chipType} folder in the data-set folder must match exactly a chip type folder under annotationData.\\
     
