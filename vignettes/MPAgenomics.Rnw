@@ -250,7 +250,7 @@ createArchitecture=TRUE, savePlot=TRUE, tags="Full")
 			The first pipeline offered in \texttt{MPAgenomics} consists in the segmentation of every copy-number profile of the data. Then, a calling method can be applied on all the segments to label them (e.g. ``loss'', ``normal'', ``gain''). To perform segmentation and calling at the same time, type the following lines in your R console:
 
 <<eval=FALSE>>=
-segcall=cnSegCallingProcess("datatest1",chromosome=c(1,5),method="PELT")
+segcall=cnSegCallingProcess("datatest1",chromosome=c(1,5),method="cghseg")
 #summary of segmentation and calling process
 segcall
 @
@@ -896,7 +896,7 @@ position=CNdata1$chr20$position
 	
 		Then, the segmentation process can be run using:
 <<eval=FALSE>>=
-seg=segmentation(copyNumber,position=position,plot=TRUE,verbose=TRUE,method="PELT")
+seg=segmentation(copyNumber,position=position,plot=TRUE,verbose=TRUE,method="cghseg")
 @
 	
 		This leads to the same plots as in Fig \ref{outpelt} and the results are saved in the right format for the calling function (see section \ref{calling}).
@@ -1024,7 +1024,7 @@ seg$segment
 		The graphic of the segmented profile is saved in the \texttt{figures} folder of the architecture.
 			
 <<eval=FALSE>>=
-seg2=cnSegCallingProcess("datatest1",chromosome=21:22,method="PELT")
+seg2=cnSegCallingProcess("datatest1",chromosome=21:22,method="cghseg")
 @
 			
 		The output of the function is shown in the figure \ref{segcalloutput}.
