@@ -6,10 +6,10 @@
 \contentsline {section}{\numberline {3}Starting example}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Download a toy data-set}{3}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Use of the main functions of the package}{5}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}To go further\dots }{5}{subsection.3.3}
-\contentsline {paragraph}{Use of control samples}{5}{section*.2}
+\contentsline {subsection}{\numberline {3.3}To go further\dots }{6}{subsection.3.3}
+\contentsline {paragraph}{Use of control samples}{6}{section*.2}
 \contentsline {paragraph}{Single-Patient Analysis of allele B fraction}{6}{section*.3}
-\contentsline {paragraph}{Selecting steps to be executed to avoid a complete procedure}{7}{section*.4}
+\contentsline {paragraph}{Selecting steps to be executed to avoid a complete procedure}{6}{section*.4}
 \contentsline {section}{\numberline {4}Data Normalization}{7}{section.4}
 \contentsline {subsection}{\numberline {4.1}Folder architecture}{7}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Normalization process}{9}{subsection.4.2}
