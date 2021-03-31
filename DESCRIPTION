@@ -39,6 +39,7 @@ Description: Preprocessing and analysis of genomic data. 'MPAgenomics'
     parameters involved in the wrapped packages. Considering multiple profiles
     in the same time, MPAgenomics wraps efficient penalized regression methods
     to select relevant markers associated with a given outcome.
+    Grimonprez et al. (2014) <doi:10.1186/s12859-014-0394-y>.
 Additional_repositories: https://sblanck.github.io/drat/
 License: GPL(>=2)
 Encoding: UTF-8
