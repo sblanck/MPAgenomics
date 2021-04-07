@@ -73,8 +73,9 @@ Moreover, \texttt{MPAgenomics} wraps and extends functionalities of several pack
     \end{itemize}
     
   \subsection{Installation}
-		The package can be installed from CRAN with the command line (to be typed in the R console)
+		The package can be installed with the command line (to be typed in the R console)
 <<eval=FALSE>>=
+drat::addRepo("sblanck")
 install.packages("MPAgenomics")
 @		 
 		This vignette can be produced with the command
@@ -100,7 +101,6 @@ install.packages("aroma.cn")
 We also recommend the user who would like to use the cghseg segmentation method to install \texttt{cghseg} package \cite{cghseg} with the following commands:
 \begin{scriptsize}
 <<eval=FALSE>>=
-drat::addRepo("sblanck")
 install.packages("cghseg")
 @
 \end{scriptsize}
@@ -118,6 +118,8 @@ install.packages("cghseg")
 #workdir="/home/user/Documents/workdir"
 workdir=tempdir()
 setwd(workdir)
+#increase timeout in case of long time of download
+options(timeout=600)
 @
 	
 		\subsection{Download a toy data-set}	
