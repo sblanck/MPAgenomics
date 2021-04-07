@@ -471,7 +471,7 @@ callingProcess=function(segmentData,nclass=5,cellularity=1,verbose=TRUE,...)
   cat(" OK\n") 
  
   #convert the calls
-  res$calls[res$calls==-2]="double loss"
+  res$calls[res$calls==-2]="double_loss"
   res$calls[res$calls==-1]="loss"
   res$calls[res$calls==0]="normal"
   res$calls[res$calls==1]="gain"
