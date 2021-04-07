@@ -88,7 +88,7 @@ cnSegCallingProcess=function(dataSetName,normalTumorArray,chromosome=1:22,method
     stop("dataSetName must be the name of a folder in \"rawData\" folder.")
   #onlySNP
   if(!is.logical(onlySNP))
-    stop("onlyDNP must be a boolean.")
+    stop("onlySNP must be a boolean.")
 
   #check if we are in a normal-tumor study or in a single array study
   singleStudy=TRUE
