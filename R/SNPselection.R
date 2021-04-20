@@ -344,8 +344,8 @@ variableSelection=function(dataMatrix,dataResponse,nbFolds=min(length(dataRespon
         plot(rescv)
       }
       coef=coef(rescv,s=rescv$lambda.min)
-      
-      ind=which(coef!=0)
+
+      ind=which(as.vector(coef)!=0)
       
       var=ind[-1]-1
       intercept=coef[1]
@@ -353,6 +353,7 @@ variableSelection=function(dataMatrix,dataResponse,nbFolds=min(length(dataRespon
       
       names(var)=NULL
       names(coef)=NULL
+      
     }
   }
   
