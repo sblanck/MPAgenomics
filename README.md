@@ -35,9 +35,3 @@ install.packages("drat")
 drat::addRepo("sblanck")
 install.packages("MPAgenomics")
 ```
-
-
-
-
-
-
