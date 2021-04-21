@@ -33,5 +33,5 @@ To install the full version of MPAgenomics with cghseg method, you have to insta
 ```
 install.packages("drat")
 drat::addRepo("sblanck")
-install.packages("MPAgenomics")
+install.packages("MPAgenomics",dependencies=TRUE)
 ```
