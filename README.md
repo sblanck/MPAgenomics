@@ -1,8 +1,12 @@
----
+<p><strong>strong text</strong></p># MPAgenomics test
+
+**strong text**
 
 
----
 
-<h1 id="mpagenomics-test">MPAgenomics test</h1>
-<p><strong>strong text</strong></p>
 
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0ODU2NzAyMzJdfQ==
+-->
