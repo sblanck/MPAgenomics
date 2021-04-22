@@ -35,3 +35,10 @@ install.packages("drat")
 drat::addRepo("sblanck")
 install.packages("MPAgenomics",dependencies=TRUE)
 ```
+
+## Help and Tutorial
+
+To access the thumbnail that offers a complete tutorial :
+```
+vignette('MPAgenomics')
+```
