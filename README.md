@@ -38,7 +38,7 @@ install.packages("MPAgenomics",dependencies=TRUE)
 
 ## Help and Tutorial
 
-To access the thumbnail that offers a complete tutorial :
+To access the vignette that offers a complete tutorial :
 ```
 vignette('MPAgenomics')
 ```
