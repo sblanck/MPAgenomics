@@ -11,15 +11,15 @@ The segmentation of successive multiple profiles (finding losses and gains) is p
 
 MPAgenomics exists in 2 versions:
 
- * [MPAgenomics on CRAN](#cran)
- * [MPAgenomics on drat](#drat)
+ * [MPAgenomics on CRAN without cghseg](#mpagenomics-on-cran-without-cghseg)
+ * [MPAgenomics full version with cghseg](#mpagenomics-full-version-with-cghseg)
  
 The difference between these 2 versions is that the version on CRAN does not include the cghseg segmentation method. Indeed the R package cghseg has been archived on the CRAN, and the rules of the CRAN advise against importing it into MPAgenomics.
 Only the PELT segmentation method is present in the version available on CRAN. 
 
 The PELT and cghseg segmentation methods give equivalent results. The main difference is that cghseg is faster than PELT.
 
-## MPAgenomics on CRAN
+## MPAgenomics on CRAN without cghseg
 
 To install MPAgenomics from CRAN, you juste have to run the following code
 ```
@@ -27,7 +27,7 @@ install.packages("MPAgenomics")
 ```
 
 
-## MPAgenomics on Drat
+## MPAgenomics full version with cghseg
 
 To install the full version of MPAgenomics with cghseg method, you have to install drat package, add the 'sblanck' repository and then install MPAgenomics as follows : 
 ```
